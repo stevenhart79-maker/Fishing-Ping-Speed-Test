@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Marketing Info - Fishing Ping & Speed Test</title>
+    <style>
+        :root {
+            --bg-ocean: #050b14;
+            --neon-cyan: #00f5d4;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --text-light: #f1f5f9;
+            --text-dim: #64748b;
+            --safe-top: env(safe-area-inset-top, 20px);
+            --safe-bottom: env(safe-area-inset-bottom, 20px);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
+        body {
+            background-color: var(--bg-ocean);
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: calc(var(--safe-top) + 15px) 20px calc(var(--safe-bottom) + 15px) 20px;
+        }
+
+        .shell { width: 100%; max-width: 540px; margin: 0 auto; }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .back-nav { color: var(--text-dim); text-decoration: none; font-size: 14px; font-weight: 600; }
+        h1 { font-size: 20px; font-weight: 800; }
+
+        .info-card {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        h2 { font-size: 15px; font-weight: 700; margin-bottom: 10px; color: var(--neon-cyan); text-transform: uppercase; }
+        p { color: var(--text-dim); font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+        
+        .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px; }
+        .meta-tag {
+            font-size: 11px;
+            font-weight: 700;
+            background: rgba(0, 245, 212, 0.04);
+            border: 1px solid rgba(0, 245, 212, 0.15);
+            color: var(--neon-cyan);
+            padding: 5px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+<div class="shell">
+    <div class="navbar">
+        <a href="index.html" class="back-nav">← Back</a>
+        <h1>Marketing & Info</h1>
+    </div>
+
+    <div class="info-card">
+        <h2>Dedication & High Value</h2>
+        <p>The engineering mission behind <strong>"Fishing Ping & Speed Test"</strong> is to build an essential, robust diagnostic utility toolset for anglers who require stable network synchronization in natural reserves or coastal locations. As a passionate beginner developer, I channel significant individual concentration and strict technical focus to design high responsive calculations within a beautiful, accessible UI.</p>
+        <div class="tag-row">
+            <span class="meta-tag">⚡ Precision Ping</span>
+            <span class="meta-tag">🎣 Angler Centric UI</span>
+            <span class="meta-tag">🛡️ Sandbox Security</span>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <h2>Product Monetization Strategy</h2>
+        <p><strong>Current State:</strong> The distribution package includes absolutely zero paid paywalls, upfront unlocking requirements, or mandatory recurring payments. The environment is entirely free to navigate.</p>
+        <p><strong>Future Implementation:</strong> To secure engineering independent research and sustain system operations, premium diagnostic parameters and high-frequency automated server test loops are scheduled to join via optional subscriptions in forthcoming software revisions.</p>
+    </div>
+</div>
+
+</body>
+</html>
