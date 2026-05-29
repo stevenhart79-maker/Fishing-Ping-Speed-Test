@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Privacy Policy - Fishing Ping & Speed Test</title>
+    <style>
+        :root {
+            --bg-ocean: #050b14;
+            --neon-cyan: #00f5d4;
+            --glass-bg: rgba(255, 255, 255, 0.02);
+            --glass-border: rgba(255, 255, 255, 0.06);
+            --text-light: #f1f5f9;
+            --text-dim: #64748b;
+            --safe-top: env(safe-area-inset-top, 24px);
+            --safe-bottom: env(safe-area-inset-bottom, 24px);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, sans-serif; }
+        
+        body {
+            background-color: var(--bg-ocean);
+            color: var(--text-light);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            /* Внутренние отступы безопасности сверху и снизу исключают конфликт с челкой */
+            padding: calc(var(--safe-top) + 10px) 20px calc(var(--safe-bottom) + 10px) 20px;
+        }
+
+        .shell { width: 100%; max-width: 540px; margin: 0 auto; }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+        }
+
+        .back-nav {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .document-body {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 20px; font-weight: 800; }
+        h2 { font-size: 15px; margin: 20px 0 6px 0; color: var(--neon-cyan); text-transform: uppercase; letter-spacing: 0.5px; }
+        p { color: var(--text-dim); font-size: 14px; line-height: 1.6; margin-bottom: 12px; }
+
+        .dismiss-action-btn {
+            width: 100%;
+            background: var(--neon-cyan);
+            color: #050b14;
+            border: none;
+            padding: 18px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 245, 212, 0.2);
+            transition: transform 0.2s;
+        }
+
+        .dismiss-action-btn:active {
+            transform: scale(0.99);
+        }
+    </style>
+</head>
+<body>
+
+<div class="shell">
+    <div class="navbar">
+        <a href="index.html" class="back-nav">← Back Hub</a>
+        <h1>Privacy Policy</h1>
+    </div>
+
+    <div class="document-body">
+        <p style="color: #fff;"><strong>Effective Date: May 29, 2026</strong></p>
+        <p>This privacy declaration documentation rules the processing guidelines of the mobile system utility <strong>"Fishing Ping & Speed Test"</strong> created by independent developer <strong>STEVEN HART</strong>.</p>
+        
+        <h2>1. Zero Logs Architecture</h2>
+        <p>Our commitment to user security means that we do not collect, capture, store, cache, log, or index any personal parameters, geographical location metadata, network diagnostics results, or hardware identifiers.</p>
+
+        <h2>2. Dynamic Calculation Infrastructure</h2>
+        <p>All networking requests, ping requests, and latency calculation metrics run strictly locally inside the active software layer on your phone. No background remote database transfers are configured.</p>
+
+        <h2>3. Third-Party Policy</h2>
+        <p>Because there are zero cloud databases generated on our side, your internal execution states are entirely private and are never distributed, sold, or reviewed by third-party advertising or telemetry bureaus.</p>
+    </div>
+
+    <button class="dismiss-action-btn" onclick="executeNativeClose()">Accept & Dismiss View</button>
+</div>
+
+<script>
+    function executeNativeClose() {
+        try {
+            // Передача вызова во встроенный хендлер Swift (WKWebView)
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.closeHandler) {
+                window.webkit.messageHandlers.closeHandler.postMessage("closeWebView");
+            } else {
+                console.log("No native app message bridge detected. Routing to directory index.");
+                window.location.href = "index.html";
+            }
+        } catch(err) {
+            console.error("Interface execution error:", err);
+            window.location.href = "index.html";
+        }
+    }
+</script>
+
+</body>
+</html>
